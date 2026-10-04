@@ -1,0 +1,288 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+.page {
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+
+  background-image: url("https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=2000&q=90");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 40px 20px;
+  overflow: hidden;
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(20, 15, 15, 0.42);
+  z-index: 0;
+}
+
+.invitation {
+  position: relative;
+  z-index: 1;
+
+  width: 100%;
+  max-width: 650px;
+
+  padding: 65px 55px;
+
+  text-align: center;
+
+  color: #fff;
+
+  background: rgba(35, 25, 25, 0.58);
+
+  border: 1px solid rgba(255, 255, 255, 0.45);
+
+  backdrop-filter: blur(5px);
+
+  box-shadow:
+    0 25px 70px rgba(0, 0, 0, 0.45);
+
+  border-radius: 4px;
+}
+
+.small-title {
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+  letter-spacing: 6px;
+  margin-bottom: 25px;
+  opacity: 0.9;
+}
+
+h1 {
+  font-size: 58px;
+  font-weight: 400;
+  line-height: 1.1;
+}
+
+.ornament {
+  margin: 18px 0;
+  font-size: 25px;
+}
+
+h2 {
+  font-size: 32px;
+  font-weight: 400;
+  font-style: italic;
+  margin-bottom: 25px;
+}
+
+.text {
+  max-width: 470px;
+  margin: 0 auto 35px;
+
+  font-size: 17px;
+  line-height: 1.8;
+
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.names {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 18px;
+
+  margin: 30px 0 40px;
+
+  font-size: 38px;
+  font-style: italic;
+}
+
+.names b {
+  font-size: 22px;
+  font-weight: 400;
+}
+
+.info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-bottom: 40px;
+}
+
+.info div:not(.line) {
+  min-width: 140px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.info strong {
+  font-size: 28px;
+  font-weight: 400;
+}
+
+.info span {
+  font-family: Arial, sans-serif;
+  font-size: 10px;
+  letter-spacing: 3px;
+}
+
+.info small {
+  font-size: 13px;
+  opacity: 0.8;
+}
+
+.line {
+  width: 1px;
+  height: 65px;
+  background: rgba(255, 255, 255, 0.5);
+  margin: 0 15px;
+}
+
+.location {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+
+  margin-bottom: 25px;
+}
+
+.location-icon {
+  font-size: 30px;
+}
+
+.location p {
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.location strong {
+  font-size: 17px;
+  font-weight: 400;
+}
+
+.map-button {
+  border: 1px solid rgba(255, 255, 255, 0.7);
+
+  background: rgba(255, 255, 255, 0.12);
+
+  color: white;
+
+  padding: 13px 28px;
+
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+
+  cursor: pointer;
+
+  transition: 0.25s ease;
+}
+
+.map-button:hover {
+  background: white;
+  color: #333;
+}
+
+.bottom-text {
+  margin-top: 35px;
+
+  font-size: 18px;
+  font-style: italic;
+
+  opacity: 0.9;
+}
+
+@media (max-width: 600px) {
+  .page {
+    padding: 20px 12px;
+  }
+
+  .invitation {
+    padding: 45px 22px;
+  }
+
+  h1 {
+    font-size: 42px;
+  }
+
+  h2 {
+    font-size: 26px;
+  }
+
+  .names {
+    font-size: 30px;
+    gap: 12px;
+  }
+
+  .text {
+    font-size: 15px;
+  }
+
+  .info div:not(.line) {
+    min-width: 105px;
+  }
+
+  .info strong {
+    font-size: 23px;
+  }
+
+  .info span {
+    font-size: 8px;
+    letter-spacing: 2px;
+  }
+}
+
+.music-button {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 10;
+
+  padding: 11px 18px;
+
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  border-radius: 30px;
+
+  background: rgba(0, 0, 0, 0.35);
+  color: white;
+
+  backdrop-filter: blur(8px);
+
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+
+  cursor: pointer;
+
+  transition: 0.3s ease;
+}
+
+.music-button:hover {
+  background: rgba(255, 255, 255, 0.9);
+  color: #222;
+}
+
+@media (max-width: 600px) {
+  .music-button {
+    top: 12px;
+    right: 12px;
+
+    padding: 9px 14px;
+
+    font-size: 10px;
+  }
+}
+
+
